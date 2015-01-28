@@ -1,0 +1,391 @@
+	/*typography*/
+
+	h1 {
+	color:#fff !important;
+	font-size: 60px !important;
+	font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif !important;
+	font-weight: 400 !important;
+	text-transform: uppercase !important;
+	margin-top: 0px !important;
+	margin-bottom: 15px !important;
+	}
+
+	h2 {
+	color:#fff !important;
+	}
+
+	h2.no-margin-bottom {
+	color: #000 !important;
+	}
+
+	.feature-title {
+	font-size: 30px !important;
+	font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif !important;
+	}
+
+	h3 {
+	color:#fff !important;
+	}
+
+	.info {
+	color: #fff !important;
+	font-size: 14px !important;
+	}
+
+	.facebook-info {
+	color: #fff !important;
+	font-size: 14px !important;
+	width: 240px !important;
+	float: right !important;
+	/*margin-top: -80px;*/
+	}
+
+	.input {
+	font-size:12px !important;
+	}
+
+	.fine {
+	color: #fff;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+	}
+
+	.text-container {
+	height: 570px !important;
+	margin-top: 7px !important;
+	margin-bottom: 28px !important;
+	padding: 35px !important;
+	background: rgba(0,0,0,.7) !important;
+	}
+
+	/*buttons*/
+	.button-light {
+	margin-top: 30px !important;
+	}
+
+	.button-dark {
+	color: #fff !important;
+	background: #0732a2;
+	padding: 12px 30px 12px 30px;
+	font-size: 20px;
+	font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif !important;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 3px;
+	-webkit-transition: background linear .2s, color linear .2s;
+	-moz-transition: background linear .2s, color linear .2s;
+	-o-transition: background linear .2s, color linear .2s;
+	display: block;
+	text-align: center;
+	width: 100%;
+	}
+
+	.button-dark:hover {
+	background: #ccc;
+	color: #0732a2 !important;
+	}
+
+	/*social icons*/
+	.social {
+	margin-bottom: 20px !important;
+	}
+
+	.share-icons {
+	margin-bottom: 20px !important;
+	}
+
+	.center {
+	margin-bottom: 20px !important;
+	float: left !important;
+	}
+
+	.social li a.social-button-envelope {
+	color: #fff !important;
+	background-color: #0732a2 !important;
+	}
+
+	.social li a.social-button-envelope:hover {
+	color: #0732a2 !important;
+	background-color: #fff !important;
+	}
+
+	.social li a.social-button-envelope.active {
+	color: #0732a2 !important;
+	background-color: #fff !important;
+	}
+
+	.social li a.social-button-facebook {
+	background-color: #0732a2 !important;
+	}
+
+	.social li a.social-button-facebook:hover {
+	background-color: #fff !important;
+	}
+
+	.social li a.social-button-facebook.active {
+	color: #0732a2 !important;
+	background-color: #fff !important;
+	}
+
+	.social li a.social-button-twitter {
+	background-color: #0732a2 !important;
+	}
+
+	.social li a.social-button-twitter:hover {
+	background-color: #fff !important;
+	}
+	.social li a.social-button-twitter.active {
+	color: #0732a2 !important;
+	background-color: #fff !important;
+	}
+
+	/*form*/
+	.featured {
+	margin-top: 5px !important;
+	}
+
+	.twitter-form {
+	height: 400px !important;
+	}
+
+	.facebook-form {
+	height: 520px !important;
+	}
+
+	.email-form {
+	height: 500px !important;
+	}
+
+	.confirmation-form {
+	height: 450px !important;
+	}
+
+	/*images*/
+	.teaser-section {
+	background: url(../images/spartanup-bg.png) #fff !important;
+	height: 750px !important;
+	}
+
+	.facebook-img {
+	width: 140px !important;
+	}
+
+	/*media queries*/
+	@media (min-width: 978px) and (max-width: 1199px) {
+
+		h1 {
+		color:#fff !important;
+		font-size: 40px !important;
+		font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif !important;
+		font-weight: 400 !important;
+		text-transform: uppercase !important;
+		margin-top: 0px !important;
+		margin-bottom: 15px !important;
+		}
+
+		.facebook-info {
+		color: #fff !important;
+		font-size: 14px !important;
+		width: 100% !important;
+		float: right;
+		margin-top: 20px;
+		}
+
+		.teaser-section {
+		background: url(../images/spartanup-bg.png) #fff !important;
+		height: 850px !important;
+		}
+
+		.facebook-img {
+		width: 100% !important;
+		}
+
+		.twitter-form {
+		height: 500px !important;
+		}
+
+		.facebook-form {
+		height: 680px !important;
+		}
+
+		.email-form {
+		height: 600px !important;
+		}
+
+	}
+
+	@media (max-width: 992px){
+
+		h1 {
+		color:#fff !important;
+		font-size: 40px !important;
+		font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif !important;
+		font-weight: 400 !important;
+		text-transform: uppercase !important;
+		margin-top: 0px !important;
+		margin-bottom: 15px !important;
+		}
+
+		h2 {
+		color:#fff !important;
+		font-size: 20px !important;
+		line-height: 24px !important;
+		}
+
+		.feature-title {
+		font-size: 20px !important;
+		font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif !important;
+		}
+
+		.facebook-info {
+		color: #fff !important;
+		font-size: 14px !important;
+		width: 100% !important;
+		float: right;
+		margin-top: 20px;
+		}
+
+		.teaser-section {
+		background: url(../images/spartanup-bg.png) #fff center center !important;
+		height: 850px !important;
+		}
+
+		.facebook-img {
+		width: 100% !important;
+		}
+
+		.twitter-form {
+		height: 500px !important;
+		}
+
+		.facebook-form {
+		height: 740px !important;
+		}
+
+		.email-form {
+		height: 600px !important;
+		}
+
+	}
+
+	@media (max-width: 768px){
+
+		h1 {
+		color:#fff !important;
+		font-size: 40px !important;
+		font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif !important;
+		font-weight: 400 !important;
+		text-transform: uppercase !important;
+		margin-top: 0px !important;
+		margin-bottom: 15px !important;
+		}
+
+		h2 {
+		color:#fff !important;
+		font-size: 20px !important;
+		line-height: 24px !important;
+		}
+
+		.teaser-section {
+		background: url(../images/stone-bg.jpg) !important;
+		height: auto!important;
+		}
+
+		.facebook-img {
+		width: 100% !important;
+		}
+
+		.text-container {
+		height: 440px !important;
+		margin-top: 7px !important;
+		margin-right: 16px !important;
+		margin-bottom: 28px !important;
+		margin-left: 16px !important;
+		padding: 35px !important;
+		background: rgba(0,0,0,.7) !important;
+		}
+
+		.facebook-form {
+		height: 800px !important;
+		}
+
+	}
+
+	@media (max-width: 480px){
+
+		h1 {
+		color:#fff !important;
+		font-size: 36px !important;
+		font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif !important;
+		font-weight: 400 !important;
+		text-transform: uppercase !important;
+		margin-top: 0px !important;
+		margin-bottom: 15px !important;
+		}
+
+		h2 {
+		color:#fff !important;
+		font-size: 20px !important;
+		line-height: 24px !important;
+		}
+
+
+		h2.no-margin-bottom {
+		margin-left: 15px !important;
+		}
+
+		.feature-title {
+		font-size: 20px !important;
+		font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif !important;
+		}
+
+		.facebook-info {
+		color: #fff !important;
+		font-size: 14px !important;
+		width: 100% !important;
+		float: right;
+		margin-top: 20px;
+		}
+
+		.fine {
+		color: #fff;
+		font-size: 12px;
+		font-style: italic;
+		font-weight: bold;
+		line-height: 14px !important;
+		}
+
+		.teaser-section {
+		background: url(../images/stone-bg.jpg) center center repeat !important;
+		height: auto !important;
+		}
+
+		.facebook-img {
+		width: 100% !important;
+		}
+
+		.text-container {
+		height: 675px !important;
+		margin-top: 7px !important;
+		margin-right: 16px !important;
+		margin-bottom: 28px !important;
+		margin-left: 16px !important;
+		padding: 35px !important;
+		background: rgba(0,0,0,.7) !important;
+		}
+
+		.twitter-form {
+		height: 600px !important;
+		}
+
+		.email-form {
+		height: 600px !important;
+		}
+
+		.facebook-form {
+		height: 800px !important;
+		}
+
+	}

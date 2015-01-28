@@ -1,0 +1,44 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <style>body { background-color: white; }</style>
+</head>
+<body>
+<script type="text/javascript">
+// Utility function for testing; do not use.
+var urlcheck = function (url) {
+    if (url.indexOf('http') != 0) {
+        url = location.protocol + '//' + url;
+    }
+    return url;
+};
+
+window['friendbuy'] = window['friendbuy'] || [];
+
+window['friendbuy'].push(["_setEmbedSite", urlcheck("https://embedstage.friendbuy.com")]);
+window['friendbuy'].push(["_setClientApiSite", urlcheck("https://cstage.friendbuy.com")]);
+window['friendbuy'].push(["_setCampaignId", '472']);
+
+window['friendbuy'].push(['site', "site-d7808447-2f71-47ec-8ceb-7d87737dd345-host"]);
+window['friendbuy'].push(['track', "preview", true]); // Used for preview only; do not copy.
+
+window['friendbuy'].push(['widget', "H-hM", {
+    test: true, // Used for testing only; do not copy.
+    force_mobile: false // Used for preview only; do not copy.
+}]);
+
+(function (d, l, s) {
+    var a, b = d.getElementsByTagName(s)[0];
+    a = d.createElement(s);a.type = 'text/javascript';a.async = true;
+
+    a.src = 'https://cstage.friendbuy.com/static/friendbuy.js?' + (new Date()).getTime();
+
+    b.parentNode.insertBefore(a, b);
+})(document, location, 'script');
+</script>
+<div class="friendbuy-H-hM"></div>
+</body>
+</html>

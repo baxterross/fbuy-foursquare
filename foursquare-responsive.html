@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+{% raw %}
+    <head>
+        <!-- {% set widget_builder_v2_code_hash = "d4b6128a31b9b556c8b48196febdc295" -%} -->
+
+        <!-- {# This approach comes from http://stackoverflow.com/q/10533764 -#} -->
+        <!-- {# See https://friendbuy.atlassian.net/wiki/display/SC/Widget+Builder+v2+Changelog for changelog -#} -->
+        <meta name="Landing Page"
+              content="A Friendbuy widget temlpate."
+              data-widget-version="2.3"
+              data-code-hash="{{ widget_builder_v2_code_hash }}"/>
+
+        <!-- ==============================================
+        Title and basic Metas
+        =============================================== -->
+        <meta charset="utf-8">
+        <title>Tell your friends about Foursquare</title>
+        <meta name="description" content="Share this link with your friends. If they join you, we'll reward you.">
+        <meta name="author" content="Foursquare">
+
+        <!-- ==============================================
+        Facebook Open Graph Metas
+        =============================================== -->
+        <meta property="og:url" content="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/Link-Free-Shirt_NAS-Recovered.jpg" />
+        <meta property="og:title" content="How to Get a Free Spartan Training Shirt"/>
+        <meta property="og:image" content="Want one of the most coveted shirts in the Spartan Race wardrobe? Click the link and find out how a friend can help you get one."/>
+
+        <!-- ==============================================
+        Mobile Metas
+        =============================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- ==============================================
+        CSS
+        =============================================== -->
+        <link rel="stylesheet" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/css/flexslider.css" />
+        <link rel="stylesheet" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/css/fancybox/jquery.fancybox.css" />
+        <link rel="stylesheet" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/css/style.css" />
+        <link rel="stylesheet" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/css/style-responsive.css" />
+        <link rel="stylesheet" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/css/theme.css" />
+        <link rel="stylesheet" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/css/theme-overides.css" />
+        <link rel="stylesheet" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/css/friendbuy-overrides.css" />
+
+        <!--[if IE 7]>
+            <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- ==============================================
+        Fonts
+        =============================================== -->
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:700,400,400italic,300,300italic,200,200italic,100,100italic" />
+        <link rel="stylesheet" type="text/css" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/fonts/veneer.css" />
+        <link rel="stylesheet" type="text/css" href="//fast.fonts.com/cssapi/8b998a82-e0cc-42fc-b9c0-bcedae53d8a2.css">
+        <!-- ==============================================
+        JS
+        =============================================== -->
+
+
+        <!-- ==============================================
+        Favicons
+        =============================================== -->
+        <link rel="shortcut icon" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/favicon.ico">
+        <link rel="apple-touch-icon" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/apple-touch-icon-114x114.png">
+
+        <!-- Start Google Analytics Tag-->
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-8299720-28']);
+          _gaq.push(['_setDomainName', 'foursquare.com']);
+          _gaq.push(['_setAllowLinker', true]);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+        <!-- End Google Analytics Tag-->
+
+        <!-- {% if editing_state %} --><link href="{{ url_for('static', filename='css/widget_in_edit_mode.css') }}" rel="stylesheet" type="text/css"/><!-- {% endif %} -->
+
+        <style type="text/css">
+        #fb-email-from {
+            margin-bottom: 6px;
+        }
+        div[data-fbuy-state="Facebook Message"] input,
+        div[data-fbuy-state="Twitter Message"] input {
+            margin-bottom: 0;
+        }
+        div[data-fbuy-state="Facebook Message"] input + span.validation-error,
+        div[data-fbuy-state="Twitter Message"] input + span.validation-error {
+            margin-bottom: 6px;
+        }
+        span.validation-error {
+            display: block;
+            height: 24px;
+            margin: 0;
+            line-height: 24px;
+            font-size: 14px;
+            font-family: "Lato",​sans-serif;
+            color: #0732a2;
+        }
+        </style>
+
+    </head>
+
+    <body id="top" class="fixed-nav">
+        {% if not editing_state %}{% include 'ga.html' %}{% endif %}
+        {% if not editing_state %}{{ form.hidden_tag() }}{% endif %}
+
+        <!--RUNTIME-STATE-BEGIN-->
+        <!-- ==============================================
+        Header
+        =============================================== -->
+        <section class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- ==============================================
+                        Logo
+                        =============================================== -->
+                        <div class="logo float-left">
+                            <a href="http://www.foursquare.com/">
+                                <img src="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/foursquare-white.png" alt="logo-foursquare" class="logo">
+                            </a>
+                        </div>
+                        <!-- End Logo
+                        =============================================== -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Header
+        =============================================== -->
+
+        <!-- ==============================================
+        Intro
+        =============================================== -->
+        <section class="teaser-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 text-container">
+                        <h1 class="fb-malleable">GET A FREE SPARTAN TEE!</h1>
+                        <h2>We've made it easy to recruit friends to join you as you crawl through mud, climb walls and hurl spears! Simply share the links and once a friend signs up, we'll send you an exclusive Spartan reward.</h2>
+                        <p class="fine">*Please note, registration must come through shared link for you to be eligible for reward. </p>
+                        <p class="fine">*Offer valid for Continental U.S. races only (excludes Hawaii, Alaska) </p>
+                    </div>
+                    <div class="col-sm-5 featured float-right">
+                    <!-- ==============================================
+                    Featured Box
+                    =============================================== -->
+                        {# Email State -#}
+                        <div class="widget-state" data-fbuy-state="Email Message">
+                            <h2 class="feature-title fb-malleable" data-fbuy-fixed-width>SHARE WITH EMAIL</h2>
+                            {# These forms are left in here because they're part of the CSS for the widget. -#}
+                            <form action="send-mail.php" method="post" class="email-form">
+                                <p class="fb-malleable">Share this link with your friends. If they sign up, we'll ship you a tee.</p>
+                                <p class="info"><span class="fb-malleable">Input comma-separated emails or import your</span> <a class="cs_import no-elc"><span class="fb-malleable">address book</span></a>.</p>
+
+                                <input type="text" class="input fb-malleable" data-fbuy-save-placeholder id="fb-email-to" placeholder="To" name="name" class="required">
+                                <input type="text" class="input fb-malleable" data-fbuy-save-placeholder id="fb-email-from" placeholder="From" name="email" class="required email">
+                                <span class="validation-error"></span>
+                                <input type="text" class="input fb-malleable" id="fb-email-body" value="I'm running a Spartan Race and I want you to Spartan Up with me!  Sign up using this link." name="message">
+
+                                <div class="nav">
+                                    <ul class="center social">
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Twitter Message" class="social-button-twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Facebook Message" class="social-button-facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Email Message" class="social-button-envelope active"><i class="fa fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                                <a class="button-dark button-float" id="fb-email-send" href=""><i class="fa fa-envelope"></i> | SEND</a>
+
+                                <div class="powered-by-container">
+                                    <p class="powered-by-friendbuy fine">powered by <a href="http://www.friendbuy.com/" alt="FriendBuy" target="new">friendbuy</a></p>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        {# Facebook State -#}
+                        <div class="widget-state" data-fbuy-state="Facebook Message" style="display: none">
+                            <h2 class="feature-title fb-malleable" data-fbuy-fixed-width>SHARE WITH FACEBOOK</h2>
+                            {# These forms are left in here because they're part of the CSS for the widget. -#}
+                            <form action="send-mail.php" method="post" class="facebook-form">
+                                <p>Share this link with your friends. If they sign up, we'll ship you a tee.</p>
+                                <img class="facebook-img fb-malleable"
+                                     src="https://static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/635e742c313a4d98acf14020949c38cf-Link_Free_Shirt_NAS_Recovered_jpg.jpg"
+                                     align="left"
+                                     id="fb-share-image"
+                                     data-size="140x73">
+                                <p class="facebook-info no-bottom-margin fb-malleable" id="fb-share-title">I'M RUNNING A SPARTAN RACE- ARE YOU WITH ME?</p>
+                                <p class="facebook-info fb-malleable" id="fb-share-description">http://www.foursquare.com I'm training for a Spartan Race and I want my friends by my side.  Let's tackle this challenge together- sign up with this link!</p>
+
+                                <input type="text" class="input" value="Message" id="facebook-input-message" name="message">
+                                <span class="validation-error"></span>
+                                {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
+                                <textarea style="display: none" id="facebook-textarea-message"></textarea>
+
+                                <div class="nav">
+                                    <ul class="center social">
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Twitter Message" class="social-button-twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Facebook Message" class="social-button-facebook active"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Email Message" class="social-button-envelope"><i class="fa fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                                <a class="button-dark button-float fb-share-network" data-network="facebook" href=""><i class="fa fa-facebook"></i> | SHARE</a>
+
+                                <div class="powered-by-container">
+                                    <p class="powered-by-friendbuy fine">powered by <a href="http://www.friendbuy.com/" alt="FriendBuy" target="new">friendbuy</a></p>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        {# Twitter State -#}
+                        <div class="widget-state" data-fbuy-state="Twitter Message" style="display: none">
+                            <h2 class="feature-title fb-malleable" data-fbuy-fixed-width>SHARE WITH TWITTER</h2>
+                            {# These forms are left in here because they're part of the CSS for the widget. -#}
+                            <form action="send-mail.php" method="post" class="twitter-form">
+                                <p class="fb-malleable">Share this link with your friends. If they sign up, we'll ship you a tee.</p>
+
+                                <input type="text" class="input" value="I'm running a @SpartanRace, are you with me? #AROOO" name="message">
+                                <span class="validation-error"></span>
+                                {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
+                                <textarea style="display: none"></textarea>
+
+                                <div class="nav">
+                                    <ul class="center social">
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Twitter Message" class="social-button-twitter active"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Facebook Message" class="social-button-facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Email Message" class="social-button-envelope"><i class="fa fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                                <a class="button-dark button-float fb-share-network" data-network="twitter" href=""><i class="fa fa-twitter"></i> | TWEET</a>
+
+                                <div class="powered-by-container">
+                                    <p class="powered-by-friendbuy fine">powered by <a href="http://www.friendbuy.com/" alt="FriendBuy" target="new">friendbuy</a></p>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        {# Thanks state -#}
+                        <div class="widget-state" data-fbuy-state="Thanks" style="display: none">
+                            <h2 class="feature-title fb-malleable" data-fbuy-fixed-width>THANKS FOR SHARING!</h2>
+                            {# These forms are left in here because they're part of the CSS for the widget. -#}
+                            <form id="contact-form" class="confirmation-form" action="/handle_email" method="POST">
+                                <p class="fb-malleable">Once a friend signs up, we will contact you via email.</p>
+
+                                <!-- Email Capture Form -->
+                                <div style="visibility: hidden;" class="_email_capture">
+                                    <span data-show="true" class="fb-malleable show-form" style="display: none"></span>
+                                    <p class="span12 contact fb-malleable info">HOW CAN WE CONTACT YOU WITH YOUR REWARD?</p>
+                                    <div class="row-fluid messageValidation">
+                                        <span class="validation-error" style="display: none"></span>
+                                    </div>
+                                    <div class="span12">
+                                        <input name="email"
+                                               class="input-medium centered fb-malleable"
+                                               id="fb-thanks-email"
+                                               data-fbuy-save-placeholder
+                                               placeholder="Email"
+                                               value=""
+                                               type="text">
+                                        <input type="image" src="http://static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/save_button_copy.png" class="save">&nbsp;</input>
+                                    </div>
+                                </div>
+                                <!-- /Email Capture Form -->
+
+                                <img src="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/reebokfoursquarerace-white.png" width="100%">
+                                <p></p>
+
+                                <div class="nav">
+                                    <ul class="center social">
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Twitter Message" class="social-button-twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Facebook Message" class="social-button-facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Email Message" class="social-button-envelope"><i class="fa fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="powered-by-container">
+                                    <p class="powered-by-friendbuy fine">powered by <a href="http://www.friendbuy.com/" alt="FriendBuy" target="new">friendbuy</a></p>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- End Featured Box
+                    =============================================== -->
+                </div>
+            </div>
+        </section>
+        <!-- End Intro
+        ============================================== -->
+
+        <!-- ==============================================
+        Footer
+        =============================================== -->
+        <section class="footer dark-gray-background">
+            <div class="container">
+                <div class="row">
+                    <!-- ==============================================
+                    Social
+                    =============================================== -->
+                    <div class="col-sm-7">
+                        <!--<ul class="social float-right">
+                            <li><a href="https://plus.google.com/+Spartanrace300/posts" class="social-button-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://twitter.com/foursquarerace" class="social-button-twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/foursquarerace" class="social-button-facebook"><i class="fa fa-facebook"></i></a></li>
+                        </ul>-->
+                        <p class="no-margin-bottom">Copyright &copy; 2014 <a href="#">Spartan Race, Inc.</a> All rights reserved</p>
+                    </div>
+                    <!-- End Social
+                    ============================================== -->
+                    <div class="col-sm-5">&nbsp;</div>
+                </div>
+            </div>
+        </section>
+        <!-- End Footer
+        ============================================== -->
+        <!--RUNTIME-STATE-END-->
+
+        <!-- ==============================================
+        JS
+        =============================================== -->
+        {% if not editing_state -%}
+        <script type="text/javascript" src="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/js/modernizr.js"></script>
+        <script type="text/javascript" src="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/js/jquery.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/js/jquery.easing.pack.js"></script>
+        <script type="text/javascript" src="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/js/jquery.mousewheel.pack.js"></script>
+        <script type="text/javascript" src="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/js/smoothscroll.js"></script>
+        {%- endif %}
+
+{% include "v2_js_includes.html" with context -%}
+        {% if not editing_state -%}
+        <script type="text/javascript">
+        require(['jquery'], function ($)
+        {
+            var wire_up_textarea = function ($parent_node)
+                {
+                    var $input = $parent_node.find('input'),
+                        $textarea = $parent_node.find('textarea');
+
+                    $textarea.val($input.val());
+                    $input.keyup(function (event)
+                                    {
+                                        $textarea.val($input.val());
+                                    });
+                };
+
+            $.map([$('div[data-fbuy-state="Facebook Message"]'), $('div[data-fbuy-state="Twitter Message"]')], wire_up_textarea);
+
+            {# "This prevents a bug where pressing enter in a form field submits the form and results in a blank white page." -#}
+            $('form').submit(function (event)
+            {
+                event.stopPropagation();
+                event.preventDefault();
+                return false;
+            });
+        });
+        </script>
+        {%- endif %}
+        <script type="text/javascript" src="//static-friendbuy-com.s3.amazonaws.com/widget/builder-v2/js/iframeResizer.contentWindow.min.js"></script>
+    </body>
+{% endraw %}
+</html>

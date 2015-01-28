@@ -1,0 +1,41 @@
+#contact-form .share-icons, #contact-form div.nav ul.center.social {
+    margin-bottom: 0 !important;
+}
+#contact-form div.nav {
+    height: 32px;
+}
+div.powered-by-container {
+    position: relative;
+    height: 58px;
+    clear: both;
+}
+p.powered-by-friendbuy {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    height: 30px;
+    font-weight: normal;
+}
+
+.featured form {
+    padding-bottom: 0;
+}
+
+.email-form, .facebook-form, .twitter-form {
+    height: auto !important;
+}
+
+.confirmation-form {
+    min-height: 450px !important;
+    height: auto !important;
+}
+
+.teaser-section {
+    min-height: 850px !important;
+    height: auto !important;
+}
+
+.container {
+    padding-bottom: 0;
+}
