@@ -63,7 +63,6 @@ strong {
 
 h1 {
 	font-size: 36px;
-	color: #333333;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 }
@@ -71,7 +70,6 @@ h1 {
 h2 {
 	font-size: 28px;
 	line-height: 38px;
-	color: #333333;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	margin-bottom: 30px;
@@ -80,7 +78,6 @@ h2 {
 h3 {
 	font-size: 20px;
 	line-height: 30px;
-	color: #333333;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	margin-bottom: 20px;
@@ -89,7 +86,6 @@ h3 {
 h4 {
 	font-size: 16px;
 	line-height: 26px;
-	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	margin-bottom: 30px;
 }
@@ -97,25 +93,16 @@ h4 {
 
 p {
 	font-size: 22px;
-	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	line-height: 30px;
 	margin-bottom: 20px;
-	color: #333333;
 }
 
 .body-copy {
 	font-size: 20px;
 }
 
-a {
-	text-decoration: none;
-	-webkit-transition: color linear .2s;
-	-moz-transition: color linear .2s;
-	-o-transition: color linear .2s;
-}
-
-a:hover {
+a, a:hover {
 	text-decoration: none;
 }
 
@@ -203,30 +190,6 @@ table {
 	padding-right: 15px !important;
 }
 
-.color-background {
-	color: #ffffff;
-}
-
-.color-background h2 {
-	color: #ffffff;
-}
-
-.white-background {
-	background: white;
-}
-
-.light-gray-background {
-	background: #717171;
-}
-
-.gray-background {
-	background: #dedede;
-}
-
-.dark-gray-background {
-	background: #333333;
-}
-
 .light-gray-background h2, .dark-gray-background h2 {
 	color: #ffffff;
 }
@@ -266,44 +229,6 @@ table {
 	margin-bottom: 0px;
 }
 
-.button-dark {
-	background: #ccc;
-	padding: 12px 30px 12px 30px;
-	font-size: 20px;
-	font-family: 'Lato', sans-serif;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-o-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-transition: background linear .2s, color linear .2s;
-	-moz-transition: background linear .2s, color linear .2s;
-	-o-transition: background linear .2s, color linear .2s;
-	display: block;
-	text-align: center;
-	width: 300px;
-	float: right;
-}
-
-.button-light {
-	background: #ffffff;
-	padding: 12px 30px 12px 30px;
-	font-size: 20px;
-	font-family: 'Lato', sans-serif;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-o-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-transition: background linear .2s, color linear .2s;
-	-moz-transition: background linear .2s, color linear .2s;
-	-o-transition: background linear .2s, color linear .2s;
-	display: block;
-	text-align: center;
-}
-
-.button-dark:hover, .button-light:hover {
-	color: #fff;
-}
-
 .form-error {
 	background-color: #610000 !important;
 }
@@ -329,27 +254,13 @@ label.error {
 	background-color: #7d1818 !important;
 }
 
-.response-message {
-	font-size: 20px;
-	line-height: 50px;
-	color: #ffffff;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-	width: 100%;
-	text-align: center;
-}
-
-
 
 /* ==============================================
 Header
 ============================================== */
 
 .header {
-	background: #ffffff;
 	width: 100%;
-	height: 74px;
-	border-bottom: 1px solid #eaeaea;
 }
 
 body.fixed-nav .header {
@@ -357,6 +268,7 @@ body.fixed-nav .header {
 	top: 0;
 	left: 0;
 	z-index: 1000;
+	padding: 19px 0 18px;
 }
 
 .header .container {
@@ -365,16 +277,6 @@ body.fixed-nav .header {
 
 .logo {
 	padding-top:20px;
-}
-
-.logo h1 {
-	font-family: 'Lato', sans-serif;
-	font-style: italic;
-}
-
-ul.nav {
-	float: right;
-	margin-bottom: 0px;
 }
 
 .video {
@@ -1330,9 +1232,6 @@ Contact
 }
 
 
-/* ==============================================
-Footer
-============================================== */
 
 .social {
 	margin-bottom: 20px;
@@ -1353,23 +1252,10 @@ Footer
 	text-align: center;
 	background: #ffffff;
 	margin-right: 0;
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	     -o-border-radius: 6px;
-	        border-radius: 6px;
-	-webkit-transition: background linear .2s;
-	   -moz-transition: background linear .2s;
-	     -o-transition: background linear .2s;
-	        transition: background linear .2s;
 }
 
 .social li a i {
 	font-size: 20px;
 	line-height: 32px;
 	color: #333333;
-}
-
-.copyright {
-	width: 100%;
-	text-align: right;
 }
