@@ -161,8 +161,7 @@
                             <form action="send-mail.php" class="email-form" method="post">
                                 <p class="fb-malleable">Share this link with your friends. If they sign up, we'll ship you a tee.</p>
 
-                                <p class="info hidden"><span class="fb-malleable">Input comma-separated emails or import your</span> <a class="cs_import no-elc"><span class="fb-malleable">address book</span></a>.</p>
-                                <input class="input fb-malleable" data-fbuy-save-placeholder="" id="fb-email-to" name="name" placeholder="To" type="text"/><span class="tooltip">?</span>
+                                <input class="input fb-malleable" data-fbuy-save-placeholder="" id="fb-email-to" name="name" placeholder="To" type="text"/><span class="tooltip">?<p class="info hidden"><span class="fb-malleable">Input comma-separated emails or import your</span> <a class="cs_import no-elc"><span class="fb-malleable">address book</span></a>.</p></span>
                                 <input class="input fb-malleable" data-fbuy-save-placeholder="" id="fb-email-from" name="email" placeholder="From" type="text"/>
                                 <span class="validation-error"></span>
                                 <textarea class="input fb-malleable" id="fb-email-body" name="message">I'm running a Spartan Race and I want you to Spartan Up with me!  Sign up using this link.</textarea>
@@ -385,6 +384,18 @@
         });
         </script>
         <script src="//static-friendbuy-com.s3.amazonaws.com/widget/builder-v2/js/iframeResizer.contentWindow.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(function() {
+            $('span.tooltip').click(function(e) {
+              e.preventDefault();
+              $('p.info').toggleClass('hidden');
+            }).mouseenter(function(e) {
+              $('p.info').removeClass('hidden');
+            }).mouseleave(function(e) {
+              $('p.info').addClass('hidden');
+            });
+          });
+        </script>
 
 
 </body></html>
