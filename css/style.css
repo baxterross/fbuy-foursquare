@@ -185,7 +185,7 @@ table {
 }
 
 .container {
-	padding: 40px 0;
+	padding: 40px 0 0;
 	padding-left: 15px !important;
 	padding-right: 15px !important;
 }
@@ -507,29 +507,26 @@ Intro
 }
 
 .featured form {
-	background: #292929;
+	background: #4e595d;
+	color: #aeb4b6;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-o-border-radius: 10px;
 	border-radius: 10px;
-	padding: 20px 30px 30px 30px;
+	padding: 20px 30px 0 30px;
 	margin-top: -20px;
 }
 
-.featured p {
-	color: #bebebe;
-}
-
-.featured form input {
+.featured form input, .featured form textarea {
 	width: 100%;
-	background: #474747 url(../images/icon-right.png) no-repeat 20px center;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-o-border-radius: 10px;
-	border-radius: 10px;
+	background: #efeff4 url(../images/icon-right.png) no-repeat 20px center;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
 	border: none;
 	padding: 12px 20px 12px 40px;
-	color: #bebebe;
+	color: #4e595d;
 	box-shadow: none;
 	font-family: 'Lato', sans-serif;
 	margin-bottom: 30px;
@@ -539,13 +536,11 @@ Intro
 	        transition: background linear .2s,color linear .2s;
 }
 
-.featured form input:hover {
-	background: #666666 url(../images/icon-right.png) no-repeat 20px center;
+.featured form input:hover, .featured form textarea:hover {
+	background: #efeff4 url(../images/icon-right.png) no-repeat 20px center;
 }
 
-.featured form input:focus {
-	background: #666666 url(../images/icon-right.png) no-repeat 20px center;
-	color: #ffffff;
+.featured form input:focus,.featured form textarea:focus {
 	box-shadow: none !important;
 }
 
@@ -1258,4 +1253,34 @@ Contact
 	font-size: 20px;
 	line-height: 32px;
 	color: #333333;
+}
+
+
+
+div.powered-by-container {
+  position: relative;
+  height: 58px;
+  clear: both;
+}
+.powered-by-friendbuy {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  height: 30px;
+  font-weight: normal;
+}
+.teaser-section {
+  min-height: 850px !important;
+  height: auto !important;
+}
+.confirmation-form {
+  min-height: 450px !important;
+  height: auto !important;
+}
+#contact-form .share-icons, #contact-form div.nav ul.center.social {
+  margin-bottom: 0 !important;
+}
+#contact-form div.nav {
+  height: 32px;
 }

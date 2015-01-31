@@ -4,7 +4,8 @@ Main blue: #0732a2
 button blue: #2d5be3
 section blue: #e6ebf6
 link blue: #2d5be3
-text blue: #4e595d
+text blue, dark background: #4e595d
+input background: #efeff4
 
 ============================================== */
 
@@ -157,10 +158,6 @@ ul.info li {
 
 .featured form, .featured .event-recap {
 	border-radius: 0;
-}
-
-.featured form input {
-	border-radius: 3px;
 }
 
 .featured form input[type="submit"], .button-dark, .button-light, .featured a.event-button {
@@ -511,8 +508,8 @@ body.fixed-nav #race {
 /*typography*/
 
 .feature-title {
-font-size: 30px;
-font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+  font-size: 30px;
+  font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
 }
 
 .info {
@@ -576,18 +573,6 @@ float: right;
 /*form*/
 .featured {
 margin-top: 5px;
-}
-
-.twitter-form {
-height: 400px;
-}
-
-.facebook-form {
-height: 520px;
-}
-
-.email-form {
-height: 500px;
 }
 
 .confirmation-form {
