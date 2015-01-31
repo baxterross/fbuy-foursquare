@@ -1319,8 +1319,7 @@ div.powered-by-container {
   font-weight: normal;
 }
 .teaser-section {
-  min-height: 850px !important;
-  height: auto !important;
+  padding-bottom: 60px;
 }
 .confirmation-form {
   min-height: 450px !important;

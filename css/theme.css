@@ -581,8 +581,7 @@ height: 450px;
 
 /*images*/
 .teaser-section {
-background: url(../images/spartanup-bg.png) #fff;
-height: 750px;
+  background: #fff;
 }
 
 .facebook-img {
