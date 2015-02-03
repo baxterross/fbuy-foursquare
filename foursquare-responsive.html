@@ -16,15 +16,15 @@
         =============================================== -->
         <meta charset="utf-8">
         <title>Tell your friends about Foursquare</title>
-        <meta name="description" content="Share this link with your friends. If they join you, we'll reward you.">
+        <meta name="description" content="Share this link with your friends.">
         <meta name="author" content="Foursquare">
 
         <!-- ==============================================
         Facebook Open Graph Metas
         =============================================== -->
-        <meta property="og:url" content="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/Link-Free-Shirt_NAS-Recovered.jpg" />
-        <meta property="og:title" content="How to Get a Free Spartan Training Shirt"/>
-        <meta property="og:image" content="Want one of the most coveted shirts in the Spartan Race wardrobe? Click the link and find out how a friend can help you get one."/>
+        <meta property="og:url" content="" />
+        <meta property="og:title" content=""/>
+        <meta property="og:image" content=""/>
 
         <!-- ==============================================
         Mobile Metas
@@ -137,13 +137,13 @@
                         <div class="widget-state" data-fbuy-state="Email Message">
                             <h2 class="feature-title fb-malleable" data-fbuy-fixed-width>SHARE WITH EMAIL</h2>
                             {# These forms are left in here because they're part of the CSS for the widget. -#}
-                            <form action="send-mail.php" method="post" class="email-form">
-                                <p class="fb-malleable">Share this link with your friends. If they sign up, we'll ship you a tee.</p>
+                            <form action="/handle_post" method="post" class="email-form">
+                                <p class="fb-malleable">Share this link with your friends.</p>
 
                                 <input class="input fb-malleable" data-fbuy-save-placeholder="" id="fb-email-to" name="name" placeholder="To" type="text"/><span class="tooltip">?<p class="info hidden"><span class="fb-malleable">Input comma-separated emails or import your</span> <a class="cs_import no-elc"><span class="fb-malleable">address book</span></a>.</p></span>
                                 <input type="text" class="input fb-malleable" data-fbuy-save-placeholder id="fb-email-from" placeholder="From" name="email" class="required email">
                                 <span class="validation-error"></span>
-                                <textarea class="input fb-malleable" id="fb-email-body" name="message">I'm running a Spartan Race and I want you to Spartan Up with me!  Sign up using this link.</textarea>
+                                <textarea class="input fb-malleable" id="fb-email-body" name="message">Default message</textarea>
 
                                 <div class="nav">
                                     <ul class="center social">
@@ -165,15 +165,15 @@
                         <div class="widget-state" data-fbuy-state="Facebook Message" style="display: none">
                             <h2 class="feature-title fb-malleable" data-fbuy-fixed-width>SHARE WITH FACEBOOK</h2>
                             {# These forms are left in here because they're part of the CSS for the widget. -#}
-                            <form action="send-mail.php" method="post" class="facebook-form">
-                                <p>Share this link with your friends. If they sign up, we'll ship you a tee.</p>
+                            <form action="/handle_post" method="post" class="facebook-form">
+                                <p>Share this link with your friends.</p>
                                 <img class="facebook-img fb-malleable"
-                                     src="https://static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/635e742c313a4d98acf14020949c38cf-Link_Free_Shirt_NAS_Recovered_jpg.jpg"
+                                     src="https://placehold.it/1000x552"
                                      align="left"
                                      id="fb-share-image"
                                      data-size="140x73">
                                 <p class="facebook-info no-bottom-margin fb-malleable" id="fb-share-title">JOIN ME ON FOURSQUARE?</p>
-                                <p class="facebook-info fb-malleable" id="fb-share-description">http://www.foursquare.com I'm training for a Spartan Race and I want my friends by my side.  Let's tackle this challenge together- sign up with this link!</p>
+                                <p class="facebook-info fb-malleable" id="fb-share-description">Default Facebook Message</p>
 
                                 <input type="text" class="input" value="Message" id="facebook-input-message" name="message">
                                 <span class="validation-error"></span>
@@ -200,10 +200,10 @@
                         <div class="widget-state" data-fbuy-state="Twitter Message" style="display: none">
                             <h2 class="feature-title fb-malleable" data-fbuy-fixed-width>SHARE WITH TWITTER</h2>
                             {# These forms are left in here because they're part of the CSS for the widget. -#}
-                            <form action="send-mail.php" method="post" class="twitter-form">
-                                <p class="fb-malleable">Share this link with your friends. If they sign up, we'll ship you a tee.</p>
+                            <form action="/handle_post" method="post" class="twitter-form">
+                                <p class="fb-malleable">Share this link with your friends.</p>
 
-                                <input type="text" class="input" value="I'm running a @SpartanRace, are you with me? #AROOO" name="message">
+                                <input type="text" class="input" value="Default Tweet" name="message">
                                 <span class="validation-error"></span>
                                 {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
                                 <textarea style="display: none"></textarea>
@@ -234,11 +234,11 @@
                                 <!-- Email Capture Form -->
                                 <div style="visibility: hidden;" class="_email_capture">
                                     <span data-show="true" class="fb-malleable show-form" style="display: none"></span>
-                                    <p class="span12 contact fb-malleable info">HOW CAN WE CONTACT YOU WITH YOUR REWARD?</p>
+                                    <p class="contact fb-malleable">HOW CAN WE CONTACT YOU WITH YOUR REWARD?</p>
                                     <div class="row-fluid messageValidation">
                                         <span class="validation-error" style="display: none"></span>
                                     </div>
-                                    <div class="span12">
+                                    <div>
                                         <input name="email"
                                                class="input-medium centered fb-malleable"
                                                id="fb-thanks-email"
@@ -251,7 +251,7 @@
                                 </div>
                                 <!-- /Email Capture Form -->
 
-                                <img src="//static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/reebokfoursquarerace-white.png" width="100%">
+                                <img src="//placehold.it/1000x552" width="100%">
                                 <p></p>
 
                                 <div class="nav">
@@ -281,8 +281,8 @@
         <!-- ==============================================
         Footer
         =============================================== -->
-        <section class="footer">
-          Copyright © 2014 <a href="#">Spartan Race, Inc.</a> All rights reserved
+        <section class="footer fb-malleable">
+          Copyright © 2014 All rights reserved
         </section>
         <!-- End Footer
         ============================================== -->
