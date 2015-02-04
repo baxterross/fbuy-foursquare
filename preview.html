@@ -1,44 +1,21 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <title></title>
-    <style>body { background-color: white; }</style>
+    <style>body { background-color: white; margin: 0; }</style>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
 </head>
 <body>
 <script type="text/javascript">
-// Utility function for testing; do not use.
-var urlcheck = function (url) {
-    if (url.indexOf('http') != 0) {
-        url = location.protocol + '//' + url;
-    }
-    return url;
-};
-
 window['friendbuy'] = window['friendbuy'] || [];
 
-window['friendbuy'].push(["_setEmbedSite", urlcheck("https://embedstage.friendbuy.com")]);
-window['friendbuy'].push(["_setClientApiSite", urlcheck("https://cstage.friendbuy.com")]);
-window['friendbuy'].push(["_setCampaignId", '472']);
-
-window['friendbuy'].push(['site', "site-d7808447-2f71-47ec-8ceb-7d87737dd345-host"]);
-window['friendbuy'].push(['track', "preview", true]); // Used for preview only; do not copy.
-
-window['friendbuy'].push(['widget', "H-hM", {
-    test: true, // Used for testing only; do not copy.
-    force_mobile: false // Used for preview only; do not copy.
-}]);
-
-(function (d, l, s) {
-    var a, b = d.getElementsByTagName(s)[0];
-    a = d.createElement(s);a.type = 'text/javascript';a.async = true;
-
-    a.src = 'https://cstage.friendbuy.com/static/friendbuy.js?' + (new Date()).getTime();
-
-    b.parentNode.insertBefore(a, b);
-})(document, location, 'script');
+window['friendbuy'].push(['site', 'www.friendbuy.com']);
+window['friendbuy'].push(['widget', "bT-djM"]);
+(function (f, r, n, d, b, y) {
+b = f.createElement(r), y = f.getElementsByTagName(r)[0];b.async = 1;b.src = n;y.parentNode.insertBefore(b, y);
+})(document, 'script', '//djnf6e5yyirys.cloudfront.net/js/friendbuy.min.js');
 </script>
-<div class="friendbuy-H-hM"></div>
+<div class="friendbuy-bT-djM"></div>
 </body>
 </html>
