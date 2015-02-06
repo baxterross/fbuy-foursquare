@@ -140,9 +140,10 @@
                             <form action="/handle_post" method="post" class="email-form">
                                 <p class="fb-malleable">Share this link with your friends.</p>
 
+                                <span class="validation-error"></span>
+
                                 <input class="input fb-malleable" data-fbuy-save-placeholder="" id="fb-email-to" name="name" placeholder="To" type="text"/><span class="tooltip">?<p class="info hidden"><span class="fb-malleable">Input comma-separated emails or import your</span> <a class="cs_import no-elc"><span class="fb-malleable">address book</span></a>.</p></span>
                                 <input type="text" class="input fb-malleable" data-fbuy-save-placeholder id="fb-email-from" placeholder="From" name="email" class="required email">
-                                <span class="validation-error"></span>
                                 <textarea class="input fb-malleable" id="fb-email-body" name="message">Default message</textarea>
 
                                 <div class="nav">
@@ -203,8 +204,9 @@
                             <form action="/handle_post" method="post" class="twitter-form">
                                 <p class="fb-malleable">Share this link with your friends.</p>
 
-                                <input type="text" class="input" value="Default Tweet" name="message">
                                 <span class="validation-error"></span>
+
+                                <input type="text" class="input" value="Default Tweet" name="message">
                                 {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
                                 <textarea style="display: none"></textarea>
 
