@@ -84,9 +84,6 @@
         <!--  -->
 
         <style type="text/css">
-        #fb-email-from {
-            margin-bottom: 6px;
-        }
         div[data-fbuy-state="Facebook Message"] input,
         div[data-fbuy-state="Twitter Message"] input {
             margin-bottom: 0;
@@ -97,12 +94,12 @@
         }
         span.validation-error {
             display: block;
-            height: 24px;
+            height: 28px;
             margin: 0;
             line-height: 24px;
-            font-size: 14px;
-            font-family: "Lato",​sans-serif;
-            color: #0732a2;
+            font-size: 13px;
+            font-weight: bold;
+            color: #f00;
         }
         </style>
 
@@ -158,9 +155,10 @@
                             <form action="send-mail.php" class="email-form" method="post">
                                 <p class="fb-malleable">Share this link with your friends. If they sign up, we'll ship you a tee.</p>
 
+                                <span class="validation-error"></span>
+
                                 <input class="input fb-malleable" data-fbuy-save-placeholder="" id="fb-email-to" name="name" placeholder="To" type="text"/><span class="tooltip">?<p class="info hidden"><span class="fb-malleable">Input comma-separated emails or import your</span> <a class="cs_import no-elc"><span class="fb-malleable">address book</span></a>.</p></span>
                                 <input class="input fb-malleable" data-fbuy-save-placeholder="" id="fb-email-from" name="email" placeholder="From" type="text"/>
-                                <span class="validation-error"></span>
                                 <textarea class="input fb-malleable" id="fb-email-body" name="message">I'm running a Spartan Race and I want you to Spartan Up with me!  Sign up using this link.</textarea>
 
                                 <div class="nav">
