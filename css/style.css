@@ -1194,7 +1194,6 @@ Contact
 .contact form {
 	margin-top: 20px;
 }
-
 .contact form input {
 	width: 100%;
 	background: #474747 url(../images/icon-right.png) no-repeat 20px center;
@@ -1212,17 +1211,14 @@ Contact
 	-moz-transition: background linear .2s,color linear .2s;
 	-o-transition: background linear .2s,color linear .2s;
 }
-
 .contact form input:hover {
 	background: #666666 url(../images/icon-right.png) no-repeat 20px center;
 }
-
 .contact form input:focus {
 	background: #666666 url(../images/icon-right.png) no-repeat 20px center;
 	color: #ffffff;
 	box-shadow: none !important;
 }
-
 .contact form input[type="submit"] {
 	color: #ffffff;
 	width: 100%;
@@ -1233,6 +1229,10 @@ Contact
 	-moz-transition: background linear .2s;
 	-o-transition: background linear .2s;
 	padding-left: 20px;
+}
+form input.save {
+  width: auto;
+  margin-top: 4px;
 }
 
 .contact textarea {
