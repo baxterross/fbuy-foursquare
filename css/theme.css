@@ -344,19 +344,7 @@ body.fixed-nav #race {
 	}
 
 	.facebook-img {
-	width: 100%;
-	}
-
-	.twitter-form {
-	height: 500px;
-	}
-
-	.facebook-form {
-	height: 680px;
-	}
-
-	.email-form {
-	height: 600px;
+  	width: 100%;
 	}
 
 }
@@ -400,10 +388,6 @@ body.fixed-nav #race {
 
 	.facebook-form {
 	height: 740px;
-	}
-
-	.email-form {
-	height: 600px;
 	}
 
 }
