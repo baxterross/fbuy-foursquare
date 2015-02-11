@@ -1207,17 +1207,11 @@ form input.save {
 	padding: 0;
 }
 
-
-
-.social {
-	margin-bottom: 20px;
-}
-
 .social li {
 	float: right;
 	width: 32px;
 	height: 32px;
-	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .social li a {
@@ -1263,4 +1257,22 @@ div.powered-by-container {
 }
 #contact-form div.nav {
   height: 32px;
+}
+
+div[data-fbuy-state="Facebook Message"] input,
+div[data-fbuy-state="Twitter Message"] input {
+  margin-bottom: 0;
+}
+div[data-fbuy-state="Facebook Message"] input + span.validation-error,
+div[data-fbuy-state="Twitter Message"] input + span.validation-error {
+  margin-bottom: 6px;
+}
+span.validation-error {
+  display: block;
+  height: 30px;
+  margin: 0;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f00;
 }

@@ -176,17 +176,8 @@ ul.info li {
 	height: auto;
 }
 
-.share-icons {
- margin-bottom: 20px;
-}
-
 .center {
-margin-bottom: 20px;
 float: left;
-}
-
-.social {
-  margin-bottom: 20px;
 }
 .social li a {
 -webkit-border-radius: 3px;
