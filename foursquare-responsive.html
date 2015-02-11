@@ -140,19 +140,20 @@
                             <form action="/handle_post" method="post" class="email-form">
                                 <p class="fb-malleable">Share this link with your friends.</p>
 
-                                <span class="validation-error"></span>
-
-                                <input class="input fb-malleable" data-fbuy-save-placeholder="" id="fb-email-to" name="name" placeholder="To" type="text"/><span class="tooltip">?<p class="info hidden"><span class="fb-malleable">Input comma-separated emails or import your</span> <a class="cs_import no-elc"><span class="fb-malleable">address book</span></a>.</p></span>
-                                <input type="text" class="input fb-malleable" data-fbuy-save-placeholder id="fb-email-from" placeholder="From" name="email" class="required email">
-                                <textarea class="input fb-malleable" id="fb-email-body" name="message">Default message</textarea>
-
-                                <div class="nav">
+                                <div class="nav clearfix">
                                     <ul class="center social">
                                         <li class="share-icons"><a href="#" data-fbuy-tostate="Twitter Message" class="social-button-twitter"><i class="fa fa-twitter"></i></a></li>
                                         <li class="share-icons"><a href="#" data-fbuy-tostate="Facebook Message" class="social-button-facebook"><i class="fa fa-facebook"></i></a></li>
                                         <li class="share-icons"><a href="#" data-fbuy-tostate="Email Message" class="social-button-envelope active"><i class="fa fa-envelope"></i></a></li>
                                     </ul>
                                 </div>
+
+                                <span class="validation-error"></span>
+
+                                <input class="input fb-malleable" data-fbuy-save-placeholder="" id="fb-email-to" name="name" placeholder="To" type="text"/><span class="tooltip">?<p class="info hidden"><span class="fb-malleable">Input comma-separated emails or import your</span> <a class="cs_import no-elc"><span class="fb-malleable">address book</span></a>.</p></span>
+                                <input type="text" class="input fb-malleable" data-fbuy-save-placeholder id="fb-email-from" placeholder="From" name="email" class="required email">
+                                <textarea class="input fb-malleable" id="fb-email-body" name="message">Default message</textarea>
+
                                 <a class="button-dark button-float" id="fb-email-send" href=""><i class="fa fa-envelope"></i> | SEND</a>
 
                                 <div class="powered-by-container">
@@ -168,6 +169,15 @@
                             {# These forms are left in here because they're part of the CSS for the widget. -#}
                             <form action="/handle_post" method="post" class="facebook-form">
                                 <p>Share this link with your friends.</p>
+
+                                <div class="nav clearfix">
+                                    <ul class="center social">
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Twitter Message" class="social-button-twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Facebook Message" class="social-button-facebook active"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Email Message" class="social-button-envelope"><i class="fa fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+
                                 <img class="facebook-img fb-malleable"
                                      src="https://placehold.it/1000x552"
                                      align="left"
@@ -181,13 +191,6 @@
                                 {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
                                 <textarea style="display: none" id="facebook-textarea-message"></textarea>
 
-                                <div class="nav">
-                                    <ul class="center social">
-                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Twitter Message" class="social-button-twitter"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Facebook Message" class="social-button-facebook active"><i class="fa fa-facebook"></i></a></li>
-                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Email Message" class="social-button-envelope"><i class="fa fa-envelope"></i></a></li>
-                                    </ul>
-                                </div>
                                 <a class="button-dark button-float fb-share-network" data-network="facebook" href=""><i class="fa fa-facebook"></i> | SHARE</a>
 
                                 <div class="powered-by-container">
@@ -204,19 +207,20 @@
                             <form action="/handle_post" method="post" class="twitter-form">
                                 <p class="fb-malleable">Share this link with your friends.</p>
 
-                                <span class="validation-error"></span>
-
-                                <input type="text" class="input" value="Default Tweet" name="message">
-                                {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
-                                <textarea style="display: none"></textarea>
-
-                                <div class="nav">
+                                <div class="nav clearfix">
                                     <ul class="center social">
                                         <li class="share-icons"><a href="#" data-fbuy-tostate="Twitter Message" class="social-button-twitter active"><i class="fa fa-twitter"></i></a></li>
                                         <li class="share-icons"><a href="#" data-fbuy-tostate="Facebook Message" class="social-button-facebook"><i class="fa fa-facebook"></i></a></li>
                                         <li class="share-icons"><a href="#" data-fbuy-tostate="Email Message" class="social-button-envelope"><i class="fa fa-envelope"></i></a></li>
                                     </ul>
                                 </div>
+
+                                <span class="validation-error"></span>
+
+                                <input type="text" class="input" value="Default Tweet" name="message">
+                                {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
+                                <textarea style="display: none"></textarea>
+
                                 <a class="button-dark button-float fb-share-network" data-network="twitter" href=""><i class="fa fa-twitter"></i> | TWEET</a>
 
                                 <div class="powered-by-container">
