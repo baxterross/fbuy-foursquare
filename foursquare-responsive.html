@@ -196,7 +196,7 @@
 
                                 <span class="validation-error"></span>
 
-                                <input type="text" class="input" value="Default Tweet" name="message">
+                                <input type="text" class="input fb-malleable" value="Default Tweet" name="message">
                                 {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
                                 <textarea style="display: none"></textarea>
 
@@ -224,14 +224,15 @@
                                         <span class="validation-error" style="display: none"></span>
                                     </div>
                                     <div>
+                                    <div class="span12">
                                         <input name="email"
                                                class="input-medium centered fb-malleable"
                                                id="fb-thanks-email"
-                                               data-fbuy-save-placeholder
+                                               data-fbuy-save-placeholder=""
                                                placeholder="Email"
                                                value=""
                                                type="text">
-                                        <input type="image" src="http://static-friendbuy-com.s3.amazonaws.com/widget/foursquare/images/save_button_copy.png" class="save">&nbsp;</input>
+                                        <input type="submit" class="save" value="save" />
                                     </div>
                                 </div>
                                 <!-- /Email Capture Form -->
