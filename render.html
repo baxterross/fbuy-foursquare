@@ -162,21 +162,29 @@
                             <h2 class="feature-title fb-malleable" data-fbuy-fixed-width="">SHARE WITH FACEBOOK</h2>
                             <form action="send-mail.php" class="facebook-form" method="post">
                                 <p>Share this link with your friends. If they sign up, we'll ship you a tee.</p>
-                                <img align="left" class="facebook-img fb-malleable" data-size="140x73" id="fb-share-image" src="https:/images/635e742c313a4d98acf14020949c38cf-Link_Free_Shirt_NAS_Recovered_jpg.jpg"/>
-                                <p class="facebook-info no-bottom-margin fb-malleable" id="fb-share-title">I'M RUNNING A SPARTAN RACE- ARE YOU WITH ME?</p>
-                                <p class="facebook-info fb-malleable" id="fb-share-description">http://www.foursquare.com I'm training for a Spartan Race and I want my friends by my side.  Let's tackle this challenge together- sign up with this link!</p>
-
-                                <input class="input" id="facebook-input-message" name="message" type="text" value="Message"/>
-                                <span class="validation-error"></span>
-                                <textarea id="facebook-textarea-message" style="display: none"></textarea>
-
-                                <div class="nav">
+                                <div class="nav clearfix">
                                     <ul class="center social">
-                                        <li class="share-icons"><a class="social-button-twitter" data-fbuy-tostate="Twitter Message" href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="share-icons"><a class="social-button-facebook active" data-fbuy-tostate="Facebook Message" href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li class="share-icons"><a class="social-button-envelope" data-fbuy-tostate="Email Message" href="#"><i class="fa fa-envelope"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Twitter Message" class="social-button-twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Facebook Message" class="social-button-facebook active"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="share-icons"><a href="#" data-fbuy-tostate="Email Message" class="social-button-envelope"><i class="fa fa-envelope"></i></a></li>
                                     </ul>
                                 </div>
+
+                                <span class="validation-error"></span>
+
+                                <input type="text" class="input" placeholder="Message" id="facebook-input-message" name="message">
+
+                                <img class="facebook-img fb-malleable"
+                                     src="https://placehold.it/1000x552"
+                                     align="left"
+                                     id="fb-share-image"
+                                     data-size="140x73">
+                                <p class="facebook-info no-bottom-margin fb-malleable" id="fb-share-title">JOIN ME ON FOURSQUARE?</p>
+                                <p class="facebook-info fb-malleable" id="fb-share-description">Default Facebook Message</p>
+
+                                {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
+                                <textarea style="display: none" id="facebook-textarea-message"></textarea>
+
                                 <a class="button-dark button-float fb-share-network" data-network="facebook" href=""><i class="fa fa-facebook"></i> | SHARE</a>
 
                                 <div class="powered-by-container">
