@@ -450,7 +450,7 @@ Intro
 	margin-top: -20px;
 }
 
-.featured form input, .featured form textarea {
+form input, form textarea {
 	width: 100%;
 	background: #efeff4 url(../images/icon-right.png) no-repeat 20px center;
 	-webkit-border-radius: 3px;
@@ -1259,14 +1259,6 @@ div.powered-by-container {
   height: 32px;
 }
 
-div[data-fbuy-state="Facebook Message"] input,
-div[data-fbuy-state="Twitter Message"] input {
-  margin-bottom: 0;
-}
-div[data-fbuy-state="Facebook Message"] input + span.validation-error,
-div[data-fbuy-state="Twitter Message"] input + span.validation-error {
-  margin-bottom: 6px;
-}
 span.validation-error {
   display: block;
   height: 30px;
