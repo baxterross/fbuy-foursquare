@@ -329,11 +329,6 @@ body.fixed-nav #race {
 	  margin-top: 20px;
 	}
 
-	.teaser-section {
-	  background: url(../images/spartanup-bg.png) #fff;
-	  height: 850px;
-	}
-
 	.facebook-img {
   	width: 100%;
 	}
@@ -364,11 +359,6 @@ body.fixed-nav #race {
 	  margin-top: 20px;
 	}
 
-	.teaser-section {
-	background: url(../images/spartanup-bg.png) #fff center center;
-	height: 850px;
-	}
-
 	.facebook-img {
 	width: 100%;
 	}
@@ -391,11 +381,6 @@ body.fixed-nav #race {
   h2 {
     font-size: 20px;
     line-height: 24px;
-  }
-
-  .teaser-section {
-  background: url(../images/stone-bg.jpg);
-  height: auto!important;
   }
 
   .facebook-img {
@@ -448,11 +433,6 @@ body.fixed-nav #race {
 	  font-weight: bold;
 	  line-height: 14px;
   }
-
-	.teaser-section {
-	  background: url(../images/stone-bg.jpg) center center repeat;
-	  height: auto;
-	}
 
 	.facebook-img {
   	width: 100%;
