@@ -155,6 +155,10 @@
                                     </ul>
                                 </div>
 
+                                <span class="validation-error"></span>
+
+                                <input type="text" class="input" placeholder="Message" id="facebook-input-message" name="message">
+
                                 <img class="facebook-img fb-malleable"
                                      src="https://placehold.it/1000x552"
                                      align="left"
@@ -163,8 +167,6 @@
                                 <p class="facebook-info no-bottom-margin fb-malleable" id="fb-share-title">JOIN ME ON FOURSQUARE?</p>
                                 <p class="facebook-info fb-malleable" id="fb-share-description">Default Facebook Message</p>
 
-                                <input type="text" class="input" value="Message" id="facebook-input-message" name="message">
-                                <span class="validation-error"></span>
                                 {# The invisible textarea below is used to share the network message, since the v2 code looks for a textarea to get the network message from. -#}
                                 <textarea style="display: none" id="facebook-textarea-message"></textarea>
 
